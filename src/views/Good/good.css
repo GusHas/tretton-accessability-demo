@@ -1,0 +1,103 @@
+.vacationMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.vacationMenu h3 {
+    align-self: flex-start
+
+}
+
+.horizontalMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex: 1;
+    width: 100%;
+}
+
+.holidayOffers {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.holidayOffers button {
+    font-size: 18px;
+    width: 526px;
+    margin: 0 5px;
+    height: 73px;
+    border-radius: 9px;
+}
+
+.randomOffers {
+    display: flex;
+    flex-direction: column;
+}
+
+.randomUneven, .randomEven {
+    margin: 20px 0;
+    max-height: 513px;
+    display: flex;
+    align-items: center;
+    background-color: #F5F7FA;
+
+}
+
+.randomUneven {
+    flex-direction: row-reverse;
+}
+
+.randomEven {
+    flex-direction: row;
+}
+
+.randomOfferContent, .randomUneven img, .randomEven img {
+    width: 50%;
+    padding: 20px;
+}
+
+.randomUneven img, .randomEven img {
+    height: 438px;
+    object-fit: cover;
+}
+
+.randomOfferContent {
+    text-align: left;
+}
+
+.randomOfferContent label {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.randomOfferContent a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.bottomBar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.logoBar, .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logoBar {
+    background-color: #F5F7FA;
+    height: 126px;
+}
+
+.footer {
+    background-color: #1D2E8C;
+    height: 306px;
+}

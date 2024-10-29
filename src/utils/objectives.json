@@ -1,0 +1,35 @@
+{
+    "ableBodied": {
+        "description": "An able-bodied person, without noticable disabilites",
+        "objectives": [
+            {"descrption": "Navigate to \"Products\"", "complete": null},
+            {"descrption": "Add the red car to the shopping cart", "complete": null},
+            {"descrption": "", "complete": null},
+            {"descrption": "", "complete": null},
+            {"descrption": "", "complete": null},
+            {"descrption": "", "complete": null}
+        ]     
+    },
+    "motor": {
+        "description": "A motor disability that hinders the use of the computer mouse",
+        "objectives": [
+            {"descrption": "Navigate to \"Products\"", "complete": null},
+            {"descrption": "Add the yellow car to the shopping cart", "complete": null},
+            {"descrption": "", "complete": null},
+            {"descrption": "", "complete": null},
+            {"descrption": "", "complete": null},
+            {"descrption": "", "complete": null}
+        ]     
+    },
+    "visual": {
+        "description": "A visual disability that limits the use of ones vision",
+        "objectives": [
+            {"descrption": "Navigate to \"Products\"", "complete": null},
+            {"descrption": "Add the black car to the shopping cart", "complete": null},
+            {"descrption": "", "complete": null},
+            {"descrption": "", "complete": null},
+            {"descrption": "", "complete": null},
+            {"descrption": "", "complete": null}
+        ]     
+    }
+}

@@ -1,0 +1,16 @@
+
+.home, .titles, .buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home {
+  height: 100%;
+}
+
+.titles, .buttonContainer {
+  height: 50%;
+}
+

@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Home from "./views";
+import BadSite from "./views/Bad";
+import GoodSite from "./views/Good";
+import { ObjectiveTracker } from "./components/objectiveTracker";
+import { useObjectives } from "./utils/useObjectives";
+import Instructions from "./views/Instructions";
 
-function App() {
+const App = () => {
+  const { showTracker } = useObjectives();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showTracker && <ObjectiveTracker />}
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/instructions" element={<Instructions />} />
+        <Route path="/bad" element={<BadSite />}></Route>
+        <Route path="/good" element={<GoodSite />}></Route>
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

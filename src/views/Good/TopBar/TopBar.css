@@ -1,0 +1,57 @@
+
+.top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.logo {
+    margin-top: 50px;
+    
+}
+
+.topBar {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.toolBar {
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: flex-end;
+    flex-direction: row;
+    color: #1D2E8C;   
+    padding: 0 50px 20px 0;
+}
+
+.tool {
+    margin: 0 10px;
+}
+
+.navBar {
+    display: flex;
+    background-color: #F5F7FA;
+    padding: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 90px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.navButton {
+    color: #1D2E8C;
+    padding: 20px 50px;
+    max-width: 93px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginButton {
+    width: 125px;
+    height: 36px;
+}
