@@ -1,35 +1,22 @@
 {
-    "ableBodied": {
-        "description": "An able-bodied person, without noticable disabilites",
-        "objectives": [
-            {"descrption": "Navigate to \"Products\"", "complete": null},
-            {"descrption": "Add the red car to the shopping cart", "complete": null},
-            {"descrption": "", "complete": null},
-            {"descrption": "", "complete": null},
-            {"descrption": "", "complete": null},
-            {"descrption": "", "complete": null}
-        ]     
+  "standard": [
+    {
+      "index": 0,
+      "name": "Reguljär",
+      "description": "Du kommer att få besöka en webbplats som säljer resor. Du kommer bara att kunna navigera dig genom att använda tangenten “*Tab*” på datorn",
+      "objective": "Du kommer att få besöka en webbplats som säljer resor. Navigera längst ner till knappen \"*Nästa Upplevelse*\""
     },
-    "motor": {
-        "description": "A motor disability that hinders the use of the computer mouse",
-        "objectives": [
-            {"descrption": "Navigate to \"Products\"", "complete": null},
-            {"descrption": "Add the yellow car to the shopping cart", "complete": null},
-            {"descrption": "", "complete": null},
-            {"descrption": "", "complete": null},
-            {"descrption": "", "complete": null},
-            {"descrption": "", "complete": null}
-        ]     
+    {
+      "index": 1,
+      "name": "Motor",
+      "description": "Ett motorhandikapp som förhindrar användning av datormus.",
+      "objective": ""
     },
-    "visual": {
-        "description": "A visual disability that limits the use of ones vision",
-        "objectives": [
-            {"descrption": "Navigate to \"Products\"", "complete": null},
-            {"descrption": "Add the black car to the shopping cart", "complete": null},
-            {"descrption": "", "complete": null},
-            {"descrption": "", "complete": null},
-            {"descrption": "", "complete": null},
-            {"descrption": "", "complete": null}
-        ]     
+    {
+      "index": 2,
+      "name": "Visuell",
+      "description": "Ett visuellt handikapp som begränsar eller hindrar synen.",
+      "objective": ""
     }
+  ]
 }

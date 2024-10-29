@@ -2,6 +2,8 @@ import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import StarScreen from "../../assets/videos/StarScreen.mp4";
 import "./instructions.css";
+import { useObjectives } from "../../utils/useObjectives";
+import { replaceWithBold } from "../../utils/replaceWithBold";
 
 const Instructions = () => {
   const bgVideo = useRef(null);
@@ -10,20 +12,21 @@ const Instructions = () => {
     bgVideo.current.playbackRate = 0.5;
   }, []);
 
+  const {
+    currentProfile: { name, description, objective },
+  } = useObjectives();
+
   return (
     <div className="instructions">
       <div className="modal">
+        <h3>{`Profil: ${name}`}</h3>
         <h3>Uppgift</h3>
-        <p>Du kommer att få besöka en webbplats som säljer resor. </p>
-        <p>
-          Du kommer bara att kunna navigera dig genom att använda tangenten “
-          <b>Tab</b>” på datorn{" "}
-        </p>
+        <p>{description && replaceWithBold(description, "*")}</p>
         <p>
           <b>Uppgift:</b>
           <br />
-          Använd knappen “<b>Tab</b>” och ta dig ner på sidan till en knapp där
-          det står “<b>Nästa upplevelse</b>”
+          {objective && replaceWithBold(objective, "*")}
+          <br />
         </p>
         <Link className="linkButton" to="/good">
           <button role="link">Sätt igång!</button>

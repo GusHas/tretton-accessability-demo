@@ -14,9 +14,9 @@ const Home = () => {
         <h1>Accessability Demo</h1>
       </div>
       <div className="buttonContainer">
-      <Link to="/instructions" onClick={() => setShowTracker(true)}>
-        <button role="link">Start</button>
-      </Link>
+        <Link to="/instructions">
+          <button role="link">Start</button>
+        </Link>
       </div>
     </div>
   );

@@ -9,12 +9,20 @@ import { ReactComponent as TrettonLogo } from "../../assets/images/tretton37_bla
 import safariPhoto from "../../assets/images/safari.png";
 import allYearDealPhoto from "../../assets/images/all-year-deal.png";
 import rocketPhoto from "../../assets/images/rocket-weekend.png";
+import { useObjectives } from "../../utils/useObjectives";
+import objectives from "../../utils/objectives.json";
+import { Link } from "react-router-dom";
 
 const GoodSite = () => {
   const [errors, setErrors] = useState([]);
   function submit() {
     setErrors([...errors, "HEJ DU GJORDE FEL"]);
   }
+
+  const {
+    currentProfile: { index: objectiveIndex },
+    setCurrentProfile,
+  } = useObjectives();
 
   return (
     <div className="good">
@@ -90,12 +98,19 @@ const GoodSite = () => {
           </div>
         </div>
         <div className="bottomBar">
-            <div className="logoBar">
-              <TrettonLogo className="trettonLogo"/>
-            </div>
-            <div className="footer">
+          <div className="logoBar">
+            <TrettonLogo className="trettonLogo" />
+          </div>
+          <div className="footer">
+            <Link
+              to="/instructions"
+              onClick={() =>
+                setCurrentProfile(objectives.standard[objectiveIndex + 1])
+              }
+            >
               <button className="altButton">Nästa Upplevelse</button>
-            </div>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
