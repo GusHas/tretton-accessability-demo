@@ -44,3 +44,11 @@ button {
   background-color: white;
   color: #1D2E8C;
 }
+
+.blindFilter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: black;
+}

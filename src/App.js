@@ -6,13 +6,15 @@ import GoodSite from "./views/Good";
 import { ObjectiveTracker } from "./components/objectiveTracker";
 import { useObjectives } from "./utils/useObjectives";
 import Instructions from "./views/Instructions";
+import objectives from "./utils/objectives.json";
 
 const App = () => {
-  const { showTracker } = useObjectives();
+  const { showTracker, currentProfile } = useObjectives();
 
   return (
-    <div className="App">
+    <div className="App" style={{cursor: currentProfile === objectives.standard[1] && "none"}}>
       {showTracker && <ObjectiveTracker />}
+      {currentProfile === objectives.standard[2] && <div className="blindFilter"/>}
       <Routes>
         <Route index element={<Home />} />
         <Route path="/instructions" element={<Instructions />} />
