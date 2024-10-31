@@ -1,8 +1,8 @@
 import { failState } from "../../../utils/failState";
 import "./SpecialOffer.css";
 
-export const SpecialOffer = (
-  {i,
+export const SpecialOffer = ({
+  i,
   label,
   text,
   image,
@@ -11,8 +11,8 @@ export const SpecialOffer = (
   linkFail,
   button,
   buttonFail,
-  price}
-) => {
+  price,
+}) => {
   const isIndexEven = i % 2 === 0 || i === 0;
 
   return (

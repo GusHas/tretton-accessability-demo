@@ -1,62 +1,84 @@
+.skipLink {
+  margin-top: -50px;
+  width: auto;
+  position: absolute;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #1d2e8c;
+  padding: 10px;
+}
+
+.skipLink:focus {
+  top: 0;
+  margin: 0;
+}
+
 .vacationMenu {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .vacationMenu h3 {
-    align-self: flex-start
-
+  align-self: flex-start;
 }
 
 .horizontalMenu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex: 1;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex: 1;
+  width: 100%;
 }
 
 .holidayOffers {
-    padding: 50px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .holidayOffers button {
-    font-size: 18px;
-    width: 526px;
-    margin: 0 5px;
-    height: 73px;
-    border-radius: 9px;
+  font-size: 18px;
+  width: 526px;
+  margin: 0 5px;
+  height: 73px;
+  border-radius: 9px;
 }
 
 .specialOffers {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .bottomBar {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.logoBar, .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.logoBar,
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .logoBar {
-    background-color: #F5F7FA;
-    height: 126px;
+  background-color: #f5f7fa;
+  height: 126px;
 }
 
 .footer {
-    background-color: #1D2E8C;
-    height: 306px;
+  background-color: #1d2e8c;
+  height: 306px;
+}
+
+.footer button:focus {
+  border: 2px solid;
+  outline: 2px solid #ad71ae;
+  box-shadow: 0 0 0 2px white, 0 0 0 2.5px white, 0 0 0 3px white,
+    0 0 0 3px white, 0 0 0 4px white;
 }

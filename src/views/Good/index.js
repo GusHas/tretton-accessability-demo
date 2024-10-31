@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { TopBar } from "./TopBar/TopBar";
 import { SlideShow } from "./SlideShow/SlideShow";
 import { PackageItem } from "./PackageItem/PackageItem";
@@ -13,6 +13,8 @@ import { failState } from "../../utils/failState";
 import { SpecialOffer } from "./SpecialOffer/SpecialOffer";
 
 const GoodSite = () => {
+  const contentRef = useRef(null);
+
   const [errors, setErrors] = useState([]);
   function submit() {
     setErrors([...errors, "HEJ DU GJORDE FEL"]);
@@ -26,10 +28,17 @@ const GoodSite = () => {
 
   return (
     <div className="good">
+      <a
+        className="skipLink"
+        tabIndex={1}
+        onClick={() => contentRef.current.scrollIntoView()}
+      >
+        Gå till innehåll
+      </a>
       <div className="" aria-live="assertive">
         <TopBar />
         <SlideShow />
-        <div className="vacationMenu">
+        <div className="vacationMenu" ref={contentRef}>
           <h3>Njut av planterena med våra paketerbjudande</h3>
           <div className="horizontalMenu">
             {packagesOffers.map((offer) => (
@@ -39,7 +48,7 @@ const GoodSite = () => {
           <div className="holidayOffers">
             {holidayOffers.map((offer) => (
               <button
-              key={offer}
+                key={offer}
                 className="holidayButton"
                 onClick={() => failState("Du är inte för att shoppa")}
               >

@@ -43,6 +43,7 @@ button {
 button:focus {
   border: 2px solid white;
   outline: 2px solid #AD71AE;
+  outline-offset: 3px;
 }
 
 .altButton {
