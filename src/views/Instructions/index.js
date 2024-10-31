@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import StarScreen from "../../assets/videos/StarScreen.mp4";
 import "./instructions.css";
 import { useObjectives } from "../../utils/useObjectives";
@@ -16,6 +16,8 @@ const Instructions = () => {
     currentProfile: { name, description, objective },
   } = useObjectives();
 
+  const navigate = useNavigate();
+
   return (
     <div className="instructions">
       <div className="modal">
@@ -28,9 +30,9 @@ const Instructions = () => {
           {objective && replaceWithBold(objective, "*")}
           <br />
         </p>
-        <Link className="linkButton" to="/good">
-          <button role="link">Sätt igång!</button>
-        </Link>
+        <button role="link" onClick={() => navigate("/good")}>
+          Sätt igång!
+        </button>
       </div>
       <video ref={bgVideo} className="bgVideo" autoPlay loop muted>
         <source src={StarScreen} type="video/mp4" />

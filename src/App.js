@@ -13,6 +13,7 @@ const App = () => {
 
   return (
     <div className="App" style={{cursor: currentProfile === objectives.standard[1] && "none"}}>
+      <a></a>
       {showTracker && <ObjectiveTracker />}
       {currentProfile === objectives.standard[2] && <div className="blindFilter"/>}
       <Routes>

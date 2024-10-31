@@ -32,50 +32,9 @@
     border-radius: 9px;
 }
 
-.randomOffers {
+.specialOffers {
     display: flex;
     flex-direction: column;
-}
-
-.randomUneven, .randomEven {
-    margin: 20px 0;
-    max-height: 513px;
-    display: flex;
-    align-items: center;
-    background-color: #F5F7FA;
-
-}
-
-.randomUneven {
-    flex-direction: row-reverse;
-}
-
-.randomEven {
-    flex-direction: row;
-}
-
-.randomOfferContent, .randomUneven img, .randomEven img {
-    width: 50%;
-    padding: 20px;
-}
-
-.randomUneven img, .randomEven img {
-    height: 438px;
-    object-fit: cover;
-}
-
-.randomOfferContent {
-    text-align: left;
-}
-
-.randomOfferContent label {
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.randomOfferContent a {
-    font-weight: bold;
-    text-decoration: underline;
 }
 
 .bottomBar {

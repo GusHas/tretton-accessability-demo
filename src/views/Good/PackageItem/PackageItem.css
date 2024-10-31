@@ -3,6 +3,13 @@
   height: 100%;
   margin: 10px;
   line-height: 19px;
+  padding: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.packageItem:hover, .packageItem:focus {
+  background-color: #F5F7FA;
 }
 
 .imageContainer {

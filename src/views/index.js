@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ReactComponent as TrettonLogo } from "../assets/images/tretton37_green.svg";
 import "./home.css";
 import { useObjectives } from "../utils/useObjectives";
 
 const Home = () => {
   const { setShowTracker } = useObjectives();
+  const navigate = useNavigate();
 
   return (
     <div className="home">
@@ -14,9 +15,9 @@ const Home = () => {
         <h1>Accessability Demo</h1>
       </div>
       <div className="buttonContainer">
-        <Link to="/instructions">
-          <button role="link">Start</button>
-        </Link>
+        <button role="link" onClick={() => navigate("/instructions")}>
+          Start
+        </button>
       </div>
     </div>
   );

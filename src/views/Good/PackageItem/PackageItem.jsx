@@ -1,3 +1,4 @@
+import { failState } from "../../../utils/failState";
 import "./PackageItem.css";
 import { Tag } from "@phosphor-icons/react";
 
@@ -11,7 +12,7 @@ export const PackageItem = ({
   price,
 }) => {
   return (
-    <div className="packageItem">
+    <div className="packageItem" onClick={() => failState(`Vi kan inte åka till ${planetName} än`)} tabIndex={0}>
       {/* style={{backgroundImage: `url(${image})`}} */}
       <div className="imageContainer">
         <img className="image" alt={planetName} src={image} />
@@ -36,7 +37,7 @@ export const PackageItem = ({
           </div>
           <div className="priceInfo">
             <h4>{price} SEK</h4>
-            <span>Frånpris p.p</span>
+            <span>Frånpris per person</span>
           </div>
         </div>
       </div>

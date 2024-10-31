@@ -26,6 +26,7 @@ h1, h2, h3, h4 {
 }
 
 button {
+  cursor: pointer;
   border: none;
   border-radius: 25px;
   font-family: "Sora", sans-serif;
@@ -39,10 +40,20 @@ button {
   justify-content: center;
 }
 
+button:focus {
+  border: 2px solid white;
+  outline: 2px solid #AD71AE;
+}
+
 .altButton {
   border: 2px solid #1D2E8C;
   background-color: white;
   color: #1D2E8C;
+}
+
+.altButton:focus, .altButton:hover {
+  border: 2px solid #1D2E8C;
+  background-color: #F5F7FA;
 }
 
 .blindFilter {

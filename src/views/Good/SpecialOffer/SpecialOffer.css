@@ -1,0 +1,46 @@
+.specialEven, .specialUneven {
+    margin: 20px 0;
+    max-height: 513px;
+    display: flex;
+    align-items: center;
+    background-color: #F5F7FA;
+
+}
+
+.specialEven {
+    flex-direction: row-reverse;
+}
+
+.specialUneven {
+    flex-direction: row;
+}
+
+.specialOfferContent, .specialEven img, .specialUneven img {
+    width: 50%;
+    padding: 20px;
+}
+
+.specialEven img, .specialUneven img {
+    height: 438px;
+    object-fit: cover;
+}
+
+.specialOfferContent {
+    text-align: left;
+}
+
+.specialOfferContent label {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.specialOfferContent a {
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.specialOfferContent a:focus {
+    background-color: white;
+}
