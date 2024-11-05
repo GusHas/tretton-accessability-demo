@@ -2,21 +2,53 @@
   "standard": [
     {
       "index": 0,
-      "name": "Reguljär",
-      "description": "Du kommer att få besöka en webbplats som säljer resor. Du kommer bara att kunna navigera dig genom att använda tangenten “*Tab*” på datorn",
-      "objective": "Du kommer att få besöka en webbplats som säljer resor. Navigera längst ner till knappen \"*Nästa Upplevelse*\""
+      "title": "Navigering på en bristfällig sida med tangentbordet",
+      "navigation": [
+        "Använd  *Tab - tangenten*  ^Tab^ för att navigera genom sidan.",
+        "För att gå tillbaka använd *Shift+Tab* ^Shift^ *+* ^Tab^",
+        "För att välja ett element använd *“mellanslag”*"
+      ],
+      "objective": [
+        "Försök att *hitta knappen* till *“Nästa upplevelse”*",
+        "Notera om du *stöter på några hinder* under navigeringen eller om det känns svårt att hitta knappen."
+      ]
     },
     {
       "index": 1,
-      "name": "Motor",
-      "description": "Ett motorhandikapp som förhindrar användning av datormus.",
-      "objective": ""
+      "title": "Navigering på en tillgänglig sida med tangentbord",
+      "navigation": [
+        "Använd *Tab - tangenten* ^Tab^ för att navigera genom sidan.",
+        "För att gå tillbaka använd *Shift+Tab* ^Shift^ *+* ^Tab^",
+        "För att välja ett element använd *“mellanslag”*"
+      ],
+      "objective": [
+        "Försök att *hitta knappen* till *“Nästa upplevelse”*",
+        "Märk skillnaderna i *hur lätt eller svårt det är att navigera* jämfört med första gången."
+      ]
     },
     {
       "index": 2,
-      "name": "Visuell",
-      "description": "Ett visuellt handikapp som begränsar eller hindrar synen.",
-      "objective": ""
+      "navigation": [
+        "Använd *Tab - tangenten* ^Tab^ för att navigera genom sidan.",
+        "För att gå tillbaka använd *Shift+Tab* ^Shift^ *+* ^Tab^",
+        "c. För att välja ett element använd *“mellanslag”*"
+      ],
+      "objective": [
+        "Försök att *hitta knappen* till *“Nästa upplevelse”*",
+        "Lyssna efter hur skärmläsaren *beskriver sidans innehåll*, och notera om det är *förvirrande eller otydligt*."
+      ]
+    },
+    {
+      "index": 3,
+      "navigation": [
+        "Använd *Tab - tangenten* ^Tab^ för att navigera genom sidan.",
+        "För att gå tillbaka använd *Shift+Tab* ^Shift^ *+* ^Tab^",
+        "c. För att välja ett element använd *“mellanslag”*"
+      ],
+      "objective": [
+        "Försök att *hitta knappen* till *“Nästa upplevelse”*",
+        "Notera om navigeringen och *informationen från skärmläsaren känns tydligare och lättare att förstå* än tidigare."
+      ]
     }
   ]
 }

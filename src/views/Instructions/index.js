@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import StarScreen from "../../assets/videos/StarScreen.mp4";
 import "./instructions.css";
 import { useObjectives } from "../../utils/useObjectives";
-import { replaceWithBold } from "../../utils/replaceWithBold";
+import { handleInstructions } from "../../utils/replaceWithBold";
 
 const Instructions = () => {
   const bgVideo = useRef(null);
@@ -13,7 +13,7 @@ const Instructions = () => {
   }, []);
 
   const {
-    currentProfile: { name, description, objective },
+    currentProfile: { title, navigation, objective },
   } = useObjectives();
 
   const navigate = useNavigate();
@@ -21,15 +21,25 @@ const Instructions = () => {
   return (
     <div className="instructions">
       <div className="modal">
-        <h3>{`Profil: ${name}`}</h3>
-        <h3>Uppgift</h3>
-        <p>{description && replaceWithBold(description, "*")}</p>
-        <p>
+        <h3>{title}</h3>
+        <label>
+          <b>Navigering</b>
+        </label>
+        <ol type="a">
+          {navigation &&
+            navigation.map((paragraph) => {
+              return <li>{handleInstructions(paragraph)}</li>;
+            })}
+        </ol>
+        <label>
           <b>Uppgift:</b>
-          <br />
-          {objective && replaceWithBold(objective, "*")}
-          <br />
-        </p>
+        </label>
+        <ol>
+          {objective &&
+            objective.map((paragraph) => {
+              return <li>{handleInstructions(paragraph)}</li>;
+            })}
+        </ol>
         <button role="link" onClick={() => navigate("/good")}>
           Sätt igång!
         </button>

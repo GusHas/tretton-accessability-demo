@@ -22,14 +22,14 @@ ul {
     list-style-type: none;
 }
 
-li {
+ul li {
     display: flex;
     text-align: left;
     flex-direction: row;
     align-items: center;
 }
 
-li svg {
+ul li svg {
     padding: 0 10px;
 } 
 

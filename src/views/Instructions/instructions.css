@@ -35,3 +35,21 @@ p, h3 {
     bottom: 0;
     margin-bottom: 50px;
 }
+
+label, ol {
+  text-align: left;
+}
+
+ol {
+  line-height: 30px;
+  counter-reset: li;
+  list-style-position: outside;
+}
+ol li {
+  margin-inline:5px;
+  padding:5px 20px;
+}
+
+ol li span {
+  vertical-align: middle;
+}
