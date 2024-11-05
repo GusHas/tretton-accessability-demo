@@ -23,7 +23,7 @@ export const SlideShow = () => {
       <div
         className="playButton"
         onClick={() => setIsPlaying(!isPlaying)}
-        onKeyDown={(e) => e.key !== "Tab" && setIsPlaying(!isPlaying)}
+        onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setIsPlaying(!isPlaying)}
         tabIndex={0}
       >
         {isPlaying ? <Pause weight="fill" /> : <Play weight="fill" />}

@@ -27,7 +27,7 @@ export const SpecialOffer = ({
         {link && (
           <a
             onClick={() => failState(linkFail)}
-            onKeyDown={(e) => e.key !== "Tab" && failState(linkFail)}
+            onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && failState(linkFail)}
             tabIndex={0}
           >
             {link}

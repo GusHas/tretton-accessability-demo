@@ -15,7 +15,7 @@ export const PackageItem = ({
     <div
       className="packageItem"
       onClick={() => failState(`Vi kan inte åka till ${planetName} än`)}
-      onKeyDown={(e) => e.key !== "Tab" && failState(`Vi kan inte åka till ${planetName} än`)}
+      onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && failState(`Vi kan inte åka till ${planetName} än`)}
       tabIndex={0}
     >
       {/* style={{backgroundImage: `url(${image})`}} */}

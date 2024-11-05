@@ -23,7 +23,7 @@ export const TopBar = () => {
             role="button"
             onClick={() => failState("Du behöver söka, du är på rätt sida")}
             onKeyDown={(e) =>
-              e.key !== "Tab" &&
+              (e.key === "Enter" || e.key === " ") &&
               failState("Du behöver söka, du är på rätt sida")
             }
           >
@@ -35,7 +35,7 @@ export const TopBar = () => {
             role="link"
             onClick={() => failState("Avstå från shoppingen just nu")}
             onKeyDown={(e) =>
-              e.key !== "Tab" && failState("Avstå från shoppingen just nu")
+              (e.key === "Enter" || e.key === " ") && failState("Avstå från shoppingen just nu")
             }
           >
             <ShoppingCart className="tool" />
@@ -59,8 +59,8 @@ export const TopBar = () => {
             failState("Det går inte att bo på Saturnus riktigt än")
           }
           onKeyDown={(e) =>
-            e.key !== "Tab" &&
-            e.key !== "Tab" &&
+            (e.key === "Enter" || e.key === " ") &&
+            (e.key === "Enter" || e.key === " ") &&
             failState("Det går inte att bo på Saturnus riktigt än")
           }
         >
@@ -73,7 +73,7 @@ export const TopBar = () => {
           role="link"
           onClick={() => failState("Det hade varit för dyrt ändå")}
           onKeyDown={(e) =>
-            e.key !== "Tab" && failState("Det hade varit för dyrt ändå")
+            (e.key === "Enter" || e.key === " ") && failState("Det hade varit för dyrt ändå")
           }
         >
           <Tag className="icon" weight="fill" />
@@ -85,7 +85,7 @@ export const TopBar = () => {
           role="link"
           onClick={() => failState("Drömma kan man allt göra, om planeterna")}
           onKeyDown={(e) =>
-            e.key !== "Tab" &&
+            (e.key === "Enter" || e.key === " ") &&
             failState("Drömma kan man allt göra, om planeterna")
           }
         >
@@ -100,7 +100,7 @@ export const TopBar = () => {
             failState("Hade bilen ens klarat gravitationen på Venus?")
           }
           onKeyDown={(e) =>
-            e.key !== "Tab" &&
+            (e.key === "Enter" || e.key === " ") &&
             failState("Hade bilen ens klarat gravitationen på Venus?")
           }
         >
