@@ -1,6 +1,6 @@
 import { Circle } from "@phosphor-icons/react";
-import { useObjectives } from "../utils/useObjectives";
-import "./objectiveTracker.css";
+import { useObjectives } from "../../utils/useObjectives";
+import "./ObjectiveTracker.css";
 
 export const ObjectiveTracker = () => {
   const { currentProfile } = useObjectives();

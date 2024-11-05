@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { TopBar } from "./TopBar/TopBar";
 import { SlideShow } from "./SlideShow/SlideShow";
 import { PackageItem } from "./PackageItem/PackageItem";
@@ -11,14 +11,22 @@ import objectives from "../../utils/objectives.json";
 import { useNavigate } from "react-router-dom";
 import { failState } from "../../utils/failState";
 import { SpecialOffer } from "./SpecialOffer/SpecialOffer";
+import { CookieModal } from "../../components/CookieModal/CookieModal";
 
 const GoodSite = () => {
   const contentRef = useRef(null);
 
   const [errors, setErrors] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
   function submit() {
     setErrors([...errors, "HEJ DU GJORDE FEL"]);
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsOpen(true);
+    }, 5000);
+  }, []);
 
   const {
     currentProfile: { index: objectiveIndex },
@@ -39,6 +47,7 @@ const GoodSite = () => {
       >
         Gå till innehåll
       </a>
+      {isOpen && <CookieModal setIsOpen={() => setIsOpen(false)} />}
       <div className="" aria-live="assertive">
         <TopBar />
         <SlideShow />

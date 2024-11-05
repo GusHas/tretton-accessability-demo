@@ -1,0 +1,67 @@
+
+.cookieModal
+.popup,
+.topContent,
+.bottomContent,
+.checkboxBox,
+.buttonBox,
+.checkbox  {
+  display: flex;
+}
+
+.popup,
+.cookieModal,
+.topContent,
+.bottomContent {
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkboxBox,
+.buttonBox,
+.checkbox  {
+  flex-direction: row;
+}
+
+.cookieModal {
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    text-align: left;
+    flex: 1;
+    padding: 30px;
+    position: relative;
+    background-color: white;
+    justify-content: space-around;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+}
+
+.topContent h3 {
+    align-self: flex-start;
+}
+
+.checkboxBox, .buttonBox {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.checkboxBox input {
+    width: 24px;
+    height: 24px;
+}
+
+.checkbox {
+    align-items: center;
+}
+

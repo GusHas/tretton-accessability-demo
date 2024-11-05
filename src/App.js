@@ -3,7 +3,7 @@ import "./App.css";
 import Home from "./views";
 import BadSite from "./views/Bad";
 import GoodSite from "./views/Good";
-import { ObjectiveTracker } from "./components/objectiveTracker";
+import { ObjectiveTracker } from "./components/ObjectiveTracker/ObjectiveTracker";
 import { useObjectives } from "./utils/useObjectives";
 import Instructions from "./views/Instructions";
 import objectives from "./utils/objectives.json";
