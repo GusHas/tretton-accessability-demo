@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import StarScreen from "../../assets/videos/StarScreen.mp4";
 import "./instructions.css";
 import { useObjectives } from "../../utils/useObjectives";
-import { handleInstructions } from "../../utils/replaceWithBold";
+import { handleInstructions } from "../../utils/handleInstructions";
 
 const Instructions = () => {
   const bgVideo = useRef(null);
@@ -40,7 +40,7 @@ const Instructions = () => {
               return <li>{handleInstructions(paragraph)}</li>;
             })}
         </ol>
-        <button role="link" onClick={() => navigate("/good")}>
+        <button role="link" className="linkButton" onClick={() => navigate("/good")}>
           Sätt igång!
         </button>
       </div>

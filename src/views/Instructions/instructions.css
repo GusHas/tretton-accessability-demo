@@ -11,32 +11,34 @@
 }
 
 .modal {
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
   background-color: white;
   width: 630px;
-  height: 445px;
   position: absolute;
+  text-align: left;
   padding: 50px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-p, h3 {
+p,
+h3 {
   text-align: left;
   line-height: 24px;
 }
 
 .linkButton {
-    position: fixed;
-    align-self: center;
-    bottom: 0;
-    margin-bottom: 50px;
+  justify-self: flex-end;
+  align-self: center;
+  bottom: 0;
+  margin-bottom: auto;
 }
 
-label, ol {
+label,
+ol {
   text-align: left;
 }
 
@@ -46,8 +48,8 @@ ol {
   list-style-position: outside;
 }
 ol li {
-  margin-inline:5px;
-  padding:5px 20px;
+  margin-inline: 5px;
+  padding: 5px 20px;
 }
 
 ol li span {
