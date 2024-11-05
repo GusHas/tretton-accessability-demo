@@ -20,8 +20,10 @@ export const TopBar = () => {
           <div
             className="toolButton"
             tabIndex={0}
-            role="link"
-            onClick={() =>
+            role="button"
+            onClick={() => failState("Du behöver söka, du är på rätt sida")}
+            onKeyDown={(e) =>
+              e.key !== "Tab" &&
               failState("Du behöver söka, du är på rätt sida")
             }
           >
@@ -31,14 +33,15 @@ export const TopBar = () => {
             className="toolButton"
             tabIndex={0}
             role="link"
-            onClick={() =>
-              failState("Avstå från shoppingen just nu")
+            onClick={() => failState("Avstå från shoppingen just nu")}
+            onKeyDown={(e) =>
+              e.key !== "Tab" && failState("Avstå från shoppingen just nu")
             }
           >
             <ShoppingCart className="tool" />
           </div>
           <button
-           tabIndex={0}
+            tabIndex={0}
             className="altButton loginButton tool"
             onClick={() => failState("Du behöver inte logga in")}
           >
@@ -55,6 +58,11 @@ export const TopBar = () => {
           onClick={() =>
             failState("Det går inte att bo på Saturnus riktigt än")
           }
+          onKeyDown={(e) =>
+            e.key !== "Tab" &&
+            e.key !== "Tab" &&
+            failState("Det går inte att bo på Saturnus riktigt än")
+          }
         >
           <House className="icon" weight="fill" />
           Boende
@@ -64,6 +72,9 @@ export const TopBar = () => {
           tabIndex={0}
           role="link"
           onClick={() => failState("Det hade varit för dyrt ändå")}
+          onKeyDown={(e) =>
+            e.key !== "Tab" && failState("Det hade varit för dyrt ändå")
+          }
         >
           <Tag className="icon" weight="fill" />
           Paket
@@ -73,6 +84,10 @@ export const TopBar = () => {
           tabIndex={0}
           role="link"
           onClick={() => failState("Drömma kan man allt göra, om planeterna")}
+          onKeyDown={(e) =>
+            e.key !== "Tab" &&
+            failState("Drömma kan man allt göra, om planeterna")
+          }
         >
           <Rocket className="icon" weight="fill" />
           Resa
@@ -82,6 +97,10 @@ export const TopBar = () => {
           tabIndex={0}
           role="link"
           onClick={() =>
+            failState("Hade bilen ens klarat gravitationen på Venus?")
+          }
+          onKeyDown={(e) =>
+            e.key !== "Tab" &&
             failState("Hade bilen ens klarat gravitationen på Venus?")
           }
         >

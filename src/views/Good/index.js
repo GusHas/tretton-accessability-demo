@@ -32,6 +32,7 @@ const GoodSite = () => {
         className="skipLink"
         tabIndex={1}
         onClick={() => contentRef.current.scrollIntoView()}
+        onKeyDown={(e) => e.key !== "Tab" && contentRef.current.scrollIntoView()}
       >
         Gå till innehåll
       </a>

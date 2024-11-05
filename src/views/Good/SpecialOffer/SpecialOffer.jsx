@@ -25,7 +25,11 @@ export const SpecialOffer = ({
           <button onClick={() => failState(buttonFail)}>{button}</button>
         )}
         {link && (
-          <a onClick={() => failState(linkFail)} tabIndex={0}>
+          <a
+            onClick={() => failState(linkFail)}
+            onKeyDown={(e) => e.key !== "Tab" && failState(linkFail)}
+            tabIndex={0}
+          >
             {link}
           </a>
         )}

@@ -12,7 +12,12 @@ export const PackageItem = ({
   price,
 }) => {
   return (
-    <div className="packageItem" onClick={() => failState(`Vi kan inte åka till ${planetName} än`)} tabIndex={0}>
+    <div
+      className="packageItem"
+      onClick={() => failState(`Vi kan inte åka till ${planetName} än`)}
+      onKeyDown={(e) => e.key !== "Tab" && failState(`Vi kan inte åka till ${planetName} än`)}
+      tabIndex={0}
+    >
       {/* style={{backgroundImage: `url(${image})`}} */}
       <div className="imageContainer">
         <img className="image" alt={planetName} src={image} />

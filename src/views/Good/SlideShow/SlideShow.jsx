@@ -20,8 +20,13 @@ export const SlideShow = () => {
       <video ref={bgVideo} className="bgVideo" autoPlay loop muted>
         <source src={StarScreen} type="video/mp4" />
       </video>
-      <div className="playButton" onClick={() => setIsPlaying(!isPlaying)} tabIndex={0}>
-        {isPlaying ? <Pause weight="fill" /> : <Play weight="fill"  />}
+      <div
+        className="playButton"
+        onClick={() => setIsPlaying(!isPlaying)}
+        onKeyDown={(e) => e.key !== "Tab" && setIsPlaying(!isPlaying)}
+        tabIndex={0}
+      >
+        {isPlaying ? <Pause weight="fill" /> : <Play weight="fill" />}
       </div>
     </div>
   );
