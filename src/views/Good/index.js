@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { TopBar } from "./TopBar/TopBar";
 import { SlideShow } from "./SlideShow/SlideShow";
 import { PackageItem } from "./PackageItem/PackageItem";
@@ -17,16 +17,10 @@ const GoodSite = () => {
   const contentRef = useRef(null);
 
   const [errors, setErrors] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   function submit() {
     setErrors([...errors, "HEJ DU GJORDE FEL"]);
   }
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsOpen(true);
-    }, 5000);
-  }, []);
 
   const {
     currentProfile: { index: objectiveIndex },
@@ -35,10 +29,12 @@ const GoodSite = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="good">
+    <>
       <a
+        inert={isOpen ? "" : undefined}
         className="skipLink"
         tabIndex={1}
+        role="link"
         onClick={() => contentRef.current.scrollIntoView()}
         onKeyDown={(e) =>
           (e.key === "Enter" || e.key === " ") &&
@@ -48,7 +44,7 @@ const GoodSite = () => {
         Gå till innehåll
       </a>
       {isOpen && <CookieModal setIsOpen={() => setIsOpen(false)} />}
-      <div className="" aria-live="assertive">
+      <div className="" aria-live="assertive" inert={isOpen ? "" : undefined}>
         <TopBar />
         <SlideShow />
         <div className="vacationMenu" ref={contentRef}>
@@ -95,7 +91,7 @@ const GoodSite = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

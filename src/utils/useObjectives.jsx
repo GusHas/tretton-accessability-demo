@@ -1,10 +1,10 @@
 import { useContext, createContext, useEffect, useState } from "react";
 import objectives from "./objectives.json";
 
-const ObjectiveContext = createContext({})
+const ObjectiveContext = createContext({});
 
 export const ObjectiveContextProvider = ({ children }) => {
-  const [currentProfile, setCurrentProfile] = useState({})
+  const [currentProfile, setCurrentProfile] = useState({});
   const [showTracker, setShowTracker] = useState(false);
 
   useEffect(() => {

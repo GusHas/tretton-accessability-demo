@@ -22,11 +22,12 @@ export const SlideShow = () => {
       </video>
       <div
         className="playButton"
+        role="button"
         onClick={() => setIsPlaying(!isPlaying)}
         onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setIsPlaying(!isPlaying)}
         tabIndex={0}
       >
-        {isPlaying ? <Pause weight="fill" /> : <Play weight="fill" />}
+        {isPlaying ? <Pause weight="fill" alt="Pausa video"/> : <Play weight="fill" alt="Spela upp video"/>}
       </div>
     </div>
   );

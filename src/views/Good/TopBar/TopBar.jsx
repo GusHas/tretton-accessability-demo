@@ -9,13 +9,24 @@ import {
 import { User } from "@phosphor-icons/react/dist/ssr";
 import { ReactComponent as RymdresorLogo } from "../../../assets/images/Logga-Rymdresor.svg";
 import "./TopBar.css";
+import { useNavigate } from "react-router-dom";
 import { failState } from "../../../utils/failState";
 
 export const TopBar = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="top" role="navigation">
       <div className="topBar">
-        <RymdresorLogo className="logo" alt="rymdresor logotype" role="img" />
+        <RymdresorLogo
+          className="logo"
+          alt="rymdresor logotype"
+          role="link"
+          onClick={() => navigate("/good")}
+          tabIndex={0}
+          aria-label="Hem"
+        >
+        </RymdresorLogo>
         <div className="toolBar">
           <div
             className="toolButton"
@@ -27,18 +38,19 @@ export const TopBar = () => {
               failState("Du behöver söka, du är på rätt sida")
             }
           >
-            <MagnifyingGlass className="tool" />
+            <MagnifyingGlass className="tool" alt="Sök hemsidan" />
           </div>
           <div
             className="toolButton"
             tabIndex={0}
-            role="link"
+            role="button"
             onClick={() => failState("Avstå från shoppingen just nu")}
             onKeyDown={(e) =>
-              (e.key === "Enter" || e.key === " ") && failState("Avstå från shoppingen just nu")
+              (e.key === "Enter" || e.key === " ") &&
+              failState("Avstå från shoppingen just nu")
             }
           >
-            <ShoppingCart className="tool" />
+            <ShoppingCart className="tool" alt="Kundvagn" />
           </div>
           <button
             tabIndex={0}
@@ -73,7 +85,8 @@ export const TopBar = () => {
           role="link"
           onClick={() => failState("Det hade varit för dyrt ändå")}
           onKeyDown={(e) =>
-            (e.key === "Enter" || e.key === " ") && failState("Det hade varit för dyrt ändå")
+            (e.key === "Enter" || e.key === " ") &&
+            failState("Det hade varit för dyrt ändå")
           }
         >
           <Tag className="icon" weight="fill" />
