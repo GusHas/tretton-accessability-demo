@@ -1,6 +1,15 @@
 import "./CookieModal.css";
 
 export const CookieModal = ({ setIsOpen }) => {
+  const CheckBox = ({id, label}) => {
+    return (
+      <div className="checkbox">
+        <input type="checkbox" id={id} />
+        <label for={id}>{label}</label>
+      </div>
+    );
+  };
+
   return (
     <div className="cookieModal" tabIndex={0}>
       <div className="popup">
@@ -12,18 +21,9 @@ export const CookieModal = ({ setIsOpen }) => {
           </p>
         </div>
         <div className="checkboxBox">
-          <div className="checkbox">
-            <input type="checkbox" id="necessity" />
-            <label for="necessity">Nödvändiga</label>
-          </div>
-          <div className="checkbox">
-            <input type="checkbox" id="analysis" />
-            <label for="analysis">Analys & funktion</label>
-          </div>
-          <div className="checkbox">
-            <input type="checkbox" id="marketing" />
-            <label for="marketing">Marknadsföring</label>
-          </div>
+          <CheckBox id="necessity" label="Nödvändiga" />
+          <CheckBox id="analysis" label="Analys & funktion" />
+          <CheckBox id="marketing" label="Marknadsföring" />
         </div>
         <div className="buttonBox">
           <button onClick={setIsOpen}>Acceptera alla</button>
