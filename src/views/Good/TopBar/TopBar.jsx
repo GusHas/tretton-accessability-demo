@@ -21,7 +21,7 @@ export const TopBar = () => {
         <RymdresorLogo
           className="logo"
           alt="rymdresor logotype"
-          role="link"
+          role="button"
           onClick={() => navigate("/good")}
           tabIndex={0}
           aria-label="Hem"
@@ -32,10 +32,10 @@ export const TopBar = () => {
             className="toolButton"
             tabIndex={0}
             role="button"
-            onClick={() => failState("Du behöver söka, du är på rätt sida")}
+            onClick={() => failState("Du behöver inte söka, du är på rätt sida")}
             onKeyDown={(e) =>
               (e.key === "Enter" || e.key === " ") &&
-              failState("Du behöver söka, du är på rätt sida")
+              failState("Du behöver inte söka, du är på rätt sida")
             }
           >
             <MagnifyingGlass className="tool" alt="Sök hemsidan" />
@@ -66,12 +66,11 @@ export const TopBar = () => {
         <div
           className="navButton"
           tabIndex={0}
-          role="link"
+          role="button"
           onClick={() =>
             failState("Det går inte att bo på Saturnus riktigt än")
           }
           onKeyDown={(e) =>
-            (e.key === "Enter" || e.key === " ") &&
             (e.key === "Enter" || e.key === " ") &&
             failState("Det går inte att bo på Saturnus riktigt än")
           }

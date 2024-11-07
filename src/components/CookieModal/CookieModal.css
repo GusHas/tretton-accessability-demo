@@ -73,6 +73,7 @@
 }
 
 .closeButton {
+  color: #1D2E8C;
   cursor: pointer;
   display: flex;
   justify-content: center;

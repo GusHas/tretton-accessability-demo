@@ -6,7 +6,11 @@ export const CookieModal = ({ setIsOpen }) => {
   const CheckBox = ({ id, label }) => {
     return (
       <div className="checkbox">
-        <input type="checkbox" id={id} />
+        <input
+          type="checkbox"
+          id={id}
+          onKeyDown={(e) => e.key === "Enter" && e.target.click()}
+        />
         <label for={id}>{label}</label>
       </div>
     );
@@ -15,7 +19,14 @@ export const CookieModal = ({ setIsOpen }) => {
   const BottomLink = ({ label, failText, hasBreak }) => {
     return (
       <>
-        <a role="link" tabIndex={0} onClick={() => failState(failText)}>
+        <a
+          role="link"
+          tabIndex={0}
+          onClick={() => failState(failText)}
+          onKeyDown={(e) =>
+            (e.key === "Enter" || e.key === " ") && failState(failText)
+          }
+        >
           {label}
         </a>
         {hasBreak && " /"}
@@ -32,7 +43,6 @@ export const CookieModal = ({ setIsOpen }) => {
         aria-modal="true"
         role="dialog"
         tabIndex={-1}
-        aria-label=""
       >
         <div className="topContent">
           <h3 id="dialogLabel">Ta gärna emot våra kakor</h3>
@@ -81,6 +91,7 @@ export const CookieModal = ({ setIsOpen }) => {
           className="closeButton"
           role="button"
           onClick={setIsOpen}
+          onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setIsOpen()}
           tabIndex={0}
         >
           <X className="icon" alt="nedstängningsknapp" />
