@@ -51,9 +51,19 @@
     align-self: flex-start;
 }
 
+.checkboxBox {
+  justify-content: space-around;
+}
+
 .checkboxBox, .buttonBox {
     width: 100%;
-    justify-content: space-around;
+}
+.buttonBox {
+  justify-content: center;
+}
+
+.buttonBox button {
+  margin: 0 50px;
 }
 
 .checkboxBox input {

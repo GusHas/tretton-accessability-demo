@@ -35,7 +35,11 @@ export const packagesOffers = [
   },
 ];
 
-export const holidayOffers = ["Jul och nyår", "Sportlov 2025", "Påsklov 2025"];
+export const holidayOffers = [
+  "Boka till Jul och nyår",
+  "Boka till Sportlov 2025",
+  "Boka till Påsklov 2025",
+];
 
 export const specialOffers = [
   {
@@ -50,8 +54,8 @@ export const specialOffers = [
     label: "Skidåkarpaket på våra lodger och hotell",
     text: "Upplev rymdmagin i venus med våra exklusiva safaripaket som inkluderar bådesafari för timvis av lättillgänglig vandring. Boka idag och säkra din plats för en oförglömlig upplevelse!",
     price: "Från 200 995 SEK/person",
-    button: "Se alla skidåkarpaket",
-    buttonFail: "En annan dag kanske",
+    link: "Se alla skidåkarpaket",
+    linkFail: "En annan dag kanske",
     image: safariPhoto,
     imageAlt: "sandy dunes",
   },

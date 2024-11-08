@@ -58,6 +58,7 @@ const GoodSite = () => {
             {holidayOffers.map((offer) => (
               <button
                 key={offer}
+                role="link"
                 className="holidayButton"
                 onClick={() => failState("Du är inte för att shoppa")}
               >
