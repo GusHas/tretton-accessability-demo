@@ -13,7 +13,7 @@ import { failState } from "../../utils/failState";
 import { SpecialOffer } from "./SpecialOffer/SpecialOffer";
 import { CookieModal } from "../../components/CookieModal/CookieModal";
 
-const GoodSite = () => {
+const BadSite = () => {
   const contentRef = useRef(null);
 
   const [errors, setErrors] = useState([]);
