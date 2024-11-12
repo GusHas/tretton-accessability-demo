@@ -28,6 +28,7 @@
     },
     {
       "index": 2,
+      "title": "Navigering på en bristfällig sida med tangentbord och skärmläsare",
       "navigation": [
         "Använd *Tab - tangenten* ^Tab^ för att navigera genom sidan.",
         "För att gå tillbaka använd *Shift+Tab* ^Shift^ *+* ^Tab^",
@@ -40,6 +41,7 @@
     },
     {
       "index": 3,
+      "title": "Navigering  på en tillgänglig sida med tangentbord och skärmläsare",
       "navigation": [
         "Använd *Tab - tangenten* ^Tab^ för att navigera genom sidan.",
         "För att gå tillbaka använd *Shift+Tab* ^Shift^ *+* ^Tab^",

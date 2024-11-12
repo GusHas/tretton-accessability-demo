@@ -82,9 +82,11 @@ const GoodSite = () => {
               className="altButton"
               onClick={async () => {
                 await setCurrentProfile(
-                  objectives.standard[objectiveIndex + 1]
+                  objectiveIndex > 2
+                    ? objectives.standard[0]
+                    : objectives.standard[objectiveIndex + 1]
                 );
-                navigate("/instructions");
+                navigate(objectiveIndex > 2 ? "/instructions" : "/");
               }}
             >
               Nästa Upplevelse

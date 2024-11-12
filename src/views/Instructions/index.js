@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import StarScreen from "../../assets/videos/StarScreen.mp4";
 import "./instructions.css";
@@ -7,16 +7,25 @@ import { handleInstructions } from "../../utils/handleInstructions";
 
 const Instructions = () => {
   const bgVideo = useRef(null);
+  const [goodOrBad, setGoodOrBad] = useState("/bad");
 
   useEffect(() => {
     bgVideo.current.playbackRate = 0.5;
   }, []);
 
   const {
-    currentProfile: { title, navigation, objective },
+    currentProfile: { index, title, navigation, objective },
   } = useObjectives();
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (index === 1 || index === 3) {
+      setGoodOrBad("/good");
+    } else {
+      setGoodOrBad("/bad");
+    }
+  }, [index]);
 
   return (
     <div className="instructions">
@@ -40,7 +49,11 @@ const Instructions = () => {
               return <li>{handleInstructions(paragraph)}</li>;
             })}
         </ol>
-        <button role="link" className="linkButton" onClick={() => navigate("/good")}>
+        <button
+          role="link"
+          className="linkButton"
+          onClick={() => navigate(goodOrBad)}
+        >
           Sätt igång!
         </button>
       </div>
