@@ -12,7 +12,7 @@ const App = () => {
   const { showTracker, currentProfile } = useObjectives();
 
   return (
-    <div className="App" style={{cursor: currentProfile === objectives.standard[1] && "none"}}>
+    <div className="App">
       {showTracker && <ObjectiveTracker />}
       {/* {currentProfile === objectives.standard[2] && <div className="blindFilter"/>} */}
       <Routes>
