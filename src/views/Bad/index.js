@@ -4,14 +4,14 @@ import { SlideShow } from "./SlideShow/SlideShow";
 import { PackageItem } from "./PackageItem/PackageItem";
 import { packagesOffers, holidayOffers, specialOffers } from "./objects";
 import { CaretRight } from "@phosphor-icons/react";
-import "./Bad.css";
+import "./bad.css";
 import { ReactComponent as TrettonLogo } from "../../assets/images/tretton37_black.svg";
 import { useObjectives } from "../../utils/useObjectives";
 import objectives from "../../utils/objectives.json";
 import { useNavigate } from "react-router-dom";
 import { failState } from "../../utils/failState";
 import { SpecialOffer } from "./SpecialOffer/SpecialOffer";
-import { CookieModal } from "../../components/CookieModal/CookieModal";
+import { CookieModal } from "./CookieModal/CookieModal";
 
 const BadSite = () => {
   const contentRef = useRef(null);
@@ -34,7 +34,6 @@ const BadSite = () => {
         inert={isOpen ? "" : undefined}
         className="skipLink"
         tabIndex={1}
-        role="link"
         onClick={() => contentRef.current.scrollIntoView()}
         onKeyDown={(e) =>
           (e.key === "Enter" || e.key === " ") &&
@@ -44,7 +43,7 @@ const BadSite = () => {
         Gå till innehåll
       </a>
       {isOpen && <CookieModal setIsOpen={() => setIsOpen(false)} />}
-      <div className="" aria-live="assertive" inert={isOpen ? "" : undefined}>
+      <div inert={isOpen ? "" : undefined}>
         <TopBar />
         <SlideShow />
         <div className="vacationMenu" ref={contentRef}>
@@ -56,15 +55,15 @@ const BadSite = () => {
           </div>
           <div className="holidayOffers">
             {holidayOffers.map((offer) => (
-              <button
-                key={offer}
-                role="link"
-                className="holidayButton"
+              <a
+                tabindex={0}
                 onClick={() => failState("Du är inte för att shoppa")}
               >
-                {offer}
-                <CaretRight className="icon" />
-              </button>
+                <button key={offer} className="holidayButton">
+                  {offer}
+                  <CaretRight className="icon" />
+                </button>
+              </a>
             ))}
           </div>
           <div className="specialOffers">
@@ -78,8 +77,8 @@ const BadSite = () => {
             <TrettonLogo className="trettonLogo" />
           </div>
           <div className="footer">
-            <button
-              className="altButton"
+            <a
+            tabIndex={0}
               onClick={async () => {
                 await setCurrentProfile(
                   objectives.standard[objectiveIndex + 1]
@@ -87,8 +86,8 @@ const BadSite = () => {
                 navigate("/instructions");
               }}
             >
-              Nästa Upplevelse
-            </button>
+              <button className="altButton">Nästa Upplevelse</button>
+            </a>
           </div>
         </div>
       </div>

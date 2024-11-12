@@ -20,105 +20,101 @@ export const TopBar = () => {
       <div className="topBar">
         <RymdresorLogo
           className="logo"
-          alt="rymdresor logotype"
-          role="button"
           onClick={() => navigate("/good")}
           tabIndex={0}
-          aria-label="Hem"
-        >
-        </RymdresorLogo>
+        ></RymdresorLogo>
         <div className="toolBar">
-          <div
-            className="toolButton"
-            tabIndex={0}
-            role="button"
-            onClick={() => failState("Du behöver inte söka, du är på rätt sida")}
+          <a
+            tabindex={0}
+            onClick={() =>
+              failState("Du behöver inte söka, du är på rätt sida")
+            }
             onKeyDown={(e) =>
-              (e.key === "Enter" || e.key === " ") &&
+              (e.key === "Enter" || e.key === "_") &&
               failState("Du behöver inte söka, du är på rätt sida")
             }
           >
-            <MagnifyingGlass className="tool" alt="Sök hemsidan" />
-          </div>
-          <div
-            className="toolButton"
-            tabIndex={0}
-            role="button"
+            <div className="toolButton" tabIndex={0}>
+              <MagnifyingGlass className="tool"/>
+            </div>
+          </a>
+          <a
+            tabindex={0}
             onClick={() => failState("Avstå från shoppingen just nu")}
             onKeyDown={(e) =>
-              (e.key === "Enter" || e.key === " ") &&
+              (e.key === "Enter" || e.key === "_") &&
               failState("Avstå från shoppingen just nu")
             }
           >
-            <ShoppingCart className="tool" alt="Kundvagn" />
-          </div>
-          <button
-            tabIndex={0}
-            className="altButton loginButton tool"
-            onClick={() => failState("Du behöver inte logga in")}
-          >
-            <User className="icon" weight="bold" />
-            Logga In
-          </button>
+            <div className="toolButton" tabIndex={0}>
+              <ShoppingCart className="tool" />
+            </div>
+          </a>
+          <a tabindex={0} onClick={() => failState("Du behöver inte logga in")}>
+            <button className="altButton loginButton tool">
+              <User className="icon" weight="bold" />
+              Logga In
+            </button>
+          </a>
         </div>
       </div>
       <div className="navBar">
-        <div
-          className="navButton"
-          tabIndex={0}
-          role="button"
+        <a
+          tabindex={0}
           onClick={() =>
             failState("Det går inte att bo på Saturnus riktigt än")
           }
           onKeyDown={(e) =>
-            (e.key === "Enter" || e.key === " ") &&
+            (e.key === "Enter" || e.key === "_") &&
             failState("Det går inte att bo på Saturnus riktigt än")
           }
         >
-          <House className="icon" weight="fill" />
-          Boende
-        </div>
-        <div
-          className="navButton"
-          tabIndex={0}
-          role="link"
+          <div className="navButton" tabIndex={0}>
+            <House className="icon" weight="fill" />
+            Boende
+          </div>
+        </a>
+        <a
+          tabindex={0}
           onClick={() => failState("Det hade varit för dyrt ändå")}
           onKeyDown={(e) =>
-            (e.key === "Enter" || e.key === " ") &&
+            (e.key === "Enter" || e.key === "_") &&
             failState("Det hade varit för dyrt ändå")
           }
         >
-          <Tag className="icon" weight="fill" />
-          Paket
-        </div>
-        <div
-          className="navButton"
-          tabIndex={0}
-          role="link"
+          <div className="navButton" tabIndex={0}>
+            <Tag className="icon" weight="fill" />
+            Paket
+          </div>
+        </a>
+        <a
+          tabindex={0}
           onClick={() => failState("Drömma kan man allt göra, om planeterna")}
           onKeyDown={(e) =>
-            (e.key === "Enter" || e.key === " ") &&
+            (e.key === "Enter" || e.key === "_") &&
             failState("Drömma kan man allt göra, om planeterna")
           }
         >
-          <Rocket className="icon" weight="fill" />
-          Resa
-        </div>
-        <div
-          className="navButton"
-          tabIndex={0}
-          role="link"
+          <div className="navButton" tabIndex={0}>
+            <Rocket className="icon" weight="fill" />
+            Resa
+          </div>
+        </a>
+        <a
+          tabindex={0}
           onClick={() =>
             failState("Hade bilen ens klarat gravitationen på Venus?")
           }
           onKeyDown={(e) =>
-            (e.key === "Enter" || e.key === " ") &&
+            (e.key === "Enter" || e.key === "_") &&
             failState("Hade bilen ens klarat gravitationen på Venus?")
           }
         >
-          <Car className="icon" weight="fill" />
-          Hyra
-        </div>
+          <div className="navButton" tabIndex={0}>
+            <Car className="icon" weight="fill" />
+            Hyra
+          </div>
+        </a>
       </div>
     </div>
   );

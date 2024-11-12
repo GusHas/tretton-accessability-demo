@@ -11,7 +11,7 @@ import objectives from "../../utils/objectives.json";
 import { useNavigate } from "react-router-dom";
 import { failState } from "../../utils/failState";
 import { SpecialOffer } from "./SpecialOffer/SpecialOffer";
-import { CookieModal } from "../../components/CookieModal/CookieModal";
+import { CookieModal } from "./CookieModal/CookieModal";
 
 const GoodSite = () => {
   const contentRef = useRef(null);
@@ -82,11 +82,15 @@ const GoodSite = () => {
               className="altButton"
               onClick={async () => {
                 await setCurrentProfile(
-                  objectiveIndex === 3
+                  objectiveIndex === objectives.standard.length - 1
                     ? objectives.standard[0]
                     : objectives.standard[objectiveIndex + 1]
                 );
-                navigate(objectiveIndex === 3 ? "/instructions" : "/");
+                navigate(
+                  objectiveIndex === objectives.standard.length - 1
+                    ? "/"
+                    : "/instructions"
+                );
               }}
             >
               Nästa Upplevelse

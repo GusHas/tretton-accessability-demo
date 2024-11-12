@@ -1,5 +1,5 @@
 import { X } from "@phosphor-icons/react";
-import { failState } from "../../utils/failState";
+import { failState } from "../../../utils/failState";
 import "./CookieModal.css";
 
 export const CookieModal = ({ setIsOpen }) => {

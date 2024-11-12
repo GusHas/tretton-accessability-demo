@@ -1,0 +1,103 @@
+
+.cookieModal
+.popup,
+.topContent,
+.bottomContent,
+.checkboxBox,
+.buttonBox,
+.checkbox  {
+  display: flex;
+}
+
+.popup,
+.cookieModal,
+.topContent {
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkboxBox,
+.buttonBox,
+.checkbox,
+.bottomContent  {
+  flex-direction: row;
+}
+
+.cookieModal {
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    text-align: left;
+    flex: 1;
+    padding: 30px;
+    position: relative;
+    background-color: white;
+    justify-content: space-around;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+}
+
+.topContent h3 {
+    align-self: flex-start;
+}
+
+.checkboxBox {
+  justify-content: space-around;
+}
+
+.checkboxBox, .buttonBox {
+    width: 100%;
+}
+.buttonBox {
+  justify-content: center;
+}
+
+.buttonBox button {
+  margin: 0 50px;
+}
+
+.checkboxBox input {
+    width: 24px;
+    height: 24px;
+}
+
+.checkbox {
+    align-items: center;
+}
+
+.bottomContent a {
+  padding: 0 5px;
+  color: #1D2E8C;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.closeButton {
+  color: #1D2E8C;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.closeButton svg {
+  margin: 0;
+  padding: 10px;
+}
+
+.closeButton:hover, .closeButton:focus {
+  background-color: #F5F7FA;
+  border-radius: 25px;
+}

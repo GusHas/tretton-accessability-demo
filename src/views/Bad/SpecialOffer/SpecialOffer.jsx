@@ -6,7 +6,6 @@ export const SpecialOffer = ({
   label,
   text,
   image,
-  imageAlt,
   link,
   linkFail,
   button,
@@ -30,11 +29,11 @@ export const SpecialOffer = ({
             onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && failState(linkFail)}
             tabIndex={0}
           >
-            {link}
+            <div tabIndex={0}>{link}</div>
           </a>
         )}
       </div>
-      <img src={image} alt={imageAlt} className="specialOfferPhoto" />
+      <img src={image}className="specialOfferPhoto" />
     </div>
   );
 };
