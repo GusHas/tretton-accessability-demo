@@ -4,7 +4,7 @@ import { SlideShow } from "./SlideShow/SlideShow";
 import { PackageItem } from "./PackageItem/PackageItem";
 import { packagesOffers, holidayOffers, specialOffers } from "./objects";
 import { CaretRight } from "@phosphor-icons/react";
-import "./bad.css";
+import "./Bad.css";
 import { ReactComponent as TrettonLogo } from "../../assets/images/tretton37_black.svg";
 import { useObjectives } from "../../utils/useObjectives";
 import objectives from "../../utils/objectives.json";
