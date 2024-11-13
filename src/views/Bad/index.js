@@ -4,7 +4,7 @@ import { SlideShow } from "./SlideShow/SlideShow";
 import { PackageItem } from "./PackageItem/PackageItem";
 import { packagesOffers, holidayOffers, specialOffers } from "./objects";
 import { CaretRight } from "@phosphor-icons/react";
-import "./Bad.css";
+import "./bad.css";
 import { ReactComponent as TrettonLogo } from "../../assets/images/tretton37_black.svg";
 import { useObjectives } from "../../utils/useObjectives";
 import objectives from "../../utils/objectives.json";
@@ -46,14 +46,14 @@ const BadSite = () => {
       <div inert={isOpen ? "" : undefined}>
         <TopBar />
         <SlideShow />
-        <div className="vacationMenu" ref={contentRef}>
+        <div className="vacationMenu" ref={contentRef} tabIndex={0}>
           <h3>Njut av planterena med våra paketerbjudande</h3>
           <div className="horizontalMenu">
             {packagesOffers.map((offer) => (
               <PackageItem key={offer.packageName} {...offer} />
             ))}
           </div>
-          <div className="holidayOffers">
+          <div className="holidayOffers" tabIndex={0}>
             {holidayOffers.map((offer) => (
               <a
                 className="holidayButton"

@@ -30,10 +30,10 @@
 
 .toolBar {
     display: flex;
-    align-items: center;
+    align-items: right;
     align-content: center;
-    justify-content: flex-end;
-    flex-direction: row;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
     color: #1D2E8C;   
     padding: 0 50px 20px 0;
 }

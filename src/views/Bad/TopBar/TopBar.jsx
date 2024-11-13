@@ -23,7 +23,13 @@ export const TopBar = () => {
           onClick={() => navigate("/")}
           tabIndex={0}
         ></RymdresorLogo>
-        <div className="toolBar">
+        <div className="toolBar" tabIndex={0}>
+        <a tabindex={0} style={{float: "right"}} onClick={() => failState("Du behöver inte logga in")}>
+            <button className="altButton loginButton tool">
+              <User className="icon" weight="bold" />
+              Logga In
+            </button>
+          </a>
           <a
             tabindex={0}
             onClick={() =>
@@ -50,15 +56,9 @@ export const TopBar = () => {
               <ShoppingCart className="tool" />
             </div>
           </a>
-          <a tabindex={0} onClick={() => failState("Du behöver inte logga in")}>
-            <button className="altButton loginButton tool">
-              <User className="icon" weight="bold" />
-              Logga In
-            </button>
-          </a>
         </div>
       </div>
-      <div className="navBar">
+      <div className="navBar" tabIndex={0}>
         <a
           tabindex={0}
           onClick={() =>
