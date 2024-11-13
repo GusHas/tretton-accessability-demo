@@ -20,7 +20,7 @@ export const TopBar = () => {
       <div className="topBar">
         <RymdresorLogo
           className="logo"
-          onClick={() => navigate("/good")}
+          onClick={() => navigate("/")}
           tabIndex={0}
         ></RymdresorLogo>
         <div className="toolBar">

@@ -12,7 +12,7 @@ export const PackageItem = ({
   price,
 }) => {
   return (
-    <a
+    <a className="packageItem"
     tabindex={0}
       onClick={() => failState(`Vi kan inte åka till ${planetName} än`)}
       onKeyDown={(e) =>
@@ -20,7 +20,7 @@ export const PackageItem = ({
         failState(`Vi kan inte åka till ${planetName} än`)
       }
     >
-      <div className="packageItem" tabIndex={0}>
+      <div tabIndex={0}>
         <div className="imageContainer">
           <img className="image" src={image} />
           {inclBreakfast && (

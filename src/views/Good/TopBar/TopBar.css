@@ -8,6 +8,13 @@
 .logo {
     margin-top: 50px;
     cursor: pointer;
+    display: flex;
+    flex: 1;
+    width: 500px;
+    max-height: 100%;
+    justify-content: center;
+    align-self: center;
+    object-fit: contain;
 }
 
 .topBar {

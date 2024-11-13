@@ -38,9 +38,21 @@
   justify-content: space-between;
 }
 
+.holidayOffers a {
+  width: 526px;
+  margin: 0 5px;
+  height: 73px;
+  display: flex;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+min-height: 0;
+overflow: hidden;
+}
+
 .holidayOffers button {
   font-size: 18px;
-  width: 526px;
+  width: 100%;
   margin: 0 5px;
   height: 73px;
   border-radius: 9px;

@@ -15,16 +15,6 @@ h1, h2, h3, h4, a {
   margin: 0 5px;
 }
 
-.logo {
-  display: flex;
-  flex: 1;
-  width: 500px;
-  max-height: 100%;
-  justify-content: center;
-  align-self: center;
-  object-fit: contain;
-}
-
 button {
   cursor: pointer;
   border: none;

@@ -4,7 +4,7 @@ import { SlideShow } from "./SlideShow/SlideShow";
 import { PackageItem } from "./PackageItem/PackageItem";
 import { packagesOffers, holidayOffers, specialOffers } from "./objects";
 import { CaretRight } from "@phosphor-icons/react";
-import "./Bad.css";
+import "./bad.css";
 import { ReactComponent as TrettonLogo } from "../../assets/images/tretton37_black.svg";
 import { useObjectives } from "../../utils/useObjectives";
 import objectives from "../../utils/objectives.json";
@@ -56,10 +56,11 @@ const BadSite = () => {
           <div className="holidayOffers">
             {holidayOffers.map((offer) => (
               <a
+                className="holidayButton"
                 tabindex={0}
                 onClick={() => failState("Du är inte för att shoppa")}
               >
-                <button key={offer} className="holidayButton">
+                <button key={offer}>
                   {offer}
                   <CaretRight className="icon" />
                 </button>
@@ -78,7 +79,7 @@ const BadSite = () => {
           </div>
           <div className="footer">
             <a
-            tabIndex={0}
+              tabIndex={0}
               onClick={async () => {
                 await setCurrentProfile(
                   objectives.standard[objectiveIndex + 1]
